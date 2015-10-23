@@ -1,9 +1,9 @@
 # docker-gitlab-ci-runner-php5.6
 
 FROM bobey/docker-gitlab-ci-runner-php
-MAINTAINER  Olivier Balais "obalais@gmail.com"
+MAINTAINER  Atsushi yasui "a.yasui@gmail.com"
 
-ENV PHP_VERSION 5.6.6
+ENV PHP_VERSION 5.6.14
 
 COPY files/ci-runner.ini /root/.phpenv/versions/$PHP_VERSION/etc/conf.d/ci-runner.ini
 
@@ -17,4 +17,5 @@ RUN yes '' | pecl install \
 	redis \
 	memcache \
 	ssh2-0.12 \
-	xdebug
+	xdebug \
+	mailparse
